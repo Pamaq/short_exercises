@@ -70,29 +70,58 @@
 // newUser3.hello();
 
 // odc 127 zadanie
-const Btn1 = document.querySelector(".btn-1");
-const Btn2 = document.querySelector(".btn-2");
-const Btn3 = document.querySelector(".btn-3");
-const text = document.querySelector("p");
+// const Btn1 = document.querySelector(".btn-1");
+// const Btn2 = document.querySelector(".btn-2");
+// const Btn3 = document.querySelector(".btn-3");
+// const text = document.querySelector("p");
 
-function Dish(name, price) {
-	(this.name = name), (this.price = price);
+// function Dish(name, price) {
+// 	(this.name = name), (this.price = price);
+// }
+// const newDish = new Dish("Schabowy", 25);
+// const newDish2 = new Dish("Pierogi", 22);
+// const newDish3 = new Dish("Pomidorowa", 13);
+
+// Dish.prototype.menu = function () {
+// 	console.log(`Danie: ${this.name} cena: ${this.price}zł`);
+// 	// text.textContent = `Danie: ${this.name}, cena: ${this.price} zł`;
+// };
+
+// Btn1.addEventListener("click", () => {
+// 	newDish.menu();
+// });
+// Btn2.addEventListener("click", () => {
+// 	newDish2.menu();
+// });
+// Btn3.addEventListener("click", () => {
+// 	newDish3.menu();
+// });
+
+//zadanie konstruktor -> klasa
+// function Food(name, type) {
+// 	(this.name = name), (this.type = type);
+// }
+// Food.prototype.tellName = function () {
+// 	console.log(`To jest ${this.name}`);
+// };
+
+// Food.prototype.tellType = function () {
+// 	console.log(`Jest to ${this.type}`);
+// };
+// const food1 = new Food("pietruszka", "warzywo");
+
+// food1.tellName();
+// food1.tellType();
+class Food2 {
+	constructor(name, type) {
+		(this.name = name), (this.type = type);
+	}
+	tellName() {
+		console.log(`To jest ${this.name}`);
+	}
+	tellType() {
+		console.log(`Jest to ${this.type}`);
+	}
 }
-const newDish = new Dish("Schabowy", 25);
-const newDish2 = new Dish("Pierogi", 22);
-const newDish3 = new Dish("Pomidorowa", 13);
-
-Dish.prototype.menu = function () {
-	console.log(`Danie: ${this.name} cena: ${this.price}zł`);
-	// text.textContent = `Danie: ${this.name}, cena: ${this.price} zł`;
-};
-
-Btn1.addEventListener("click", () => {
-	newDish.menu();
-});
-Btn2.addEventListener("click", () => {
-	newDish2.menu();
-});
-Btn3.addEventListener("click", () => {
-	newDish3.menu();
-});
+const food2 = new Food2("dynia", "warzywo");
+console.log(food2);

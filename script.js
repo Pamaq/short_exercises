@@ -68,3 +68,31 @@
 // User.prototype.country = "Polska";
 // console.log(newUser2.country);
 // newUser3.hello();
+
+// odc 127 zadanie
+const Btn1 = document.querySelector(".btn-1");
+const Btn2 = document.querySelector(".btn-2");
+const Btn3 = document.querySelector(".btn-3");
+const text = document.querySelector("p");
+
+function Dish(name, price) {
+	(this.name = name), (this.price = price);
+}
+const newDish = new Dish("Schabowy", 25);
+const newDish2 = new Dish("Pierogi", 22);
+const newDish3 = new Dish("Pomidorowa", 13);
+
+Dish.prototype.menu = function () {
+	console.log(`Danie: ${this.name} cena: ${this.price}zł`);
+	// text.textContent = `Danie: ${this.name}, cena: ${this.price} zł`;
+};
+
+Btn1.addEventListener("click", () => {
+	newDish.menu();
+});
+Btn2.addEventListener("click", () => {
+	newDish2.menu();
+});
+Btn3.addEventListener("click", () => {
+	newDish3.menu();
+});

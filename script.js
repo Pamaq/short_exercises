@@ -112,16 +112,49 @@
 
 // food1.tellName();
 // food1.tellType();
-class Food2 {
-	constructor(name, type) {
-		(this.name = name), (this.type = type);
+// class Food2 {
+// 	constructor(name, type) {
+// 		(this.name = name), (this.type = type);
+// 	}
+// 	tellName() {
+// 		console.log(`To jest ${this.name}`);
+// 	}
+// 	tellType() {
+// 		console.log(`Jest to ${this.type}`);
+// 	}
+// }
+// const food2 = new Food2("dynia", "warzywo");
+// console.log(food2);
+
+//rozszerzanie klas
+class Animal {
+	constructor(name) {
+		this.name;
 	}
-	tellName() {
-		console.log(`To jest ${this.name}`);
-	}
-	tellType() {
-		console.log(`Jest to ${this.type}`);
+
+	sound() {
+		console.log(`Zwierzak robi "hauhau"`);
 	}
 }
-const food2 = new Food2("dynia", "warzywo");
-console.log(food2);
+
+class Dog extends Animal {
+	constructor(name, age) {
+		super(name);
+		this.age = age;
+	}
+}
+
+class Cat extends Animal {
+	constructor(name) {
+		super(name);
+	}
+	sound() {
+		console.log("miau");
+	}
+}
+const dog = new Dog("Drops", 5);
+dog.sound();
+console.log(dog);
+const cat = new Cat("kot");
+cat.sound();
+console.log(cat);

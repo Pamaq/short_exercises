@@ -127,34 +127,82 @@
 // console.log(food2);
 
 //rozszerzanie klas
-class Animal {
-	constructor(name) {
-		this.name;
-	}
+// class Animal {
+// 	constructor(name) {
+// 		this.name;
+// 	}
 
-	sound() {
-		console.log(`Zwierzak robi "hauhau"`);
-	}
-}
+// 	sound() {
+// 		console.log(`Zwierzak robi "hauhau"`);
+// 	}
+// }
 
-class Dog extends Animal {
-	constructor(name, age) {
-		super(name);
-		this.age = age;
-	}
-}
+// class Dog extends Animal {
+// 	constructor(name, age) {
+// 		super(name);
+// 		this.age = age;
+// 	}
+// }
 
-class Cat extends Animal {
-	constructor(name) {
-		super(name);
-	}
-	sound() {
-		console.log("miau");
-	}
-}
-const dog = new Dog("Drops", 5);
-dog.sound();
-console.log(dog);
-const cat = new Cat("kot");
-cat.sound();
-console.log(cat);
+// class Cat extends Animal {
+// 	constructor(name) {
+// 		super(name);
+// 	}
+// 	sound() {
+// 		console.log("miau");
+// 	}
+// }
+// const dog = new Dog("Drops", 5);
+// dog.sound();
+// console.log(dog);
+// const cat = new Cat("kot");
+// cat.sound();
+// console.log(cat);
+
+//destrukturyzacja
+// const person = {
+// 	name: "Lily",
+
+// 	age: 23,
+
+// 	job: "DJ",
+// }; //mamy jakiś obiekt
+
+// const showInfo = () => {
+// 	//tworzymy funkcję
+
+// 	const { name, age, job } = person;
+// 	console.log(`${name} pracuje jako ${job} i ma ${age} lat`);
+// };
+// określamy co chcemy wyciągnać i skąd to chcemy wziąć)// jest równoważne z zapisaniem const name=person.name const age=person.age const job = person.job
+// showInfo();
+
+//inny sposób
+// const person = {
+// 	name: "Lily",
+
+// 	age: 23,
+
+// 	job: "DJ",
+// 	car: {
+// 		brand: "Dodge",
+// 		model: "Viper",
+// 	},
+// };
+
+// const showInfo = ({ name, age, job }) => {
+// 	console.log(`${name} pracuje jako ${job} i ma ${age} lat`);
+// };
+// showInfo(person);
+// //lub
+// const showInfo2 = ({ car: { brand, model } }) => {
+// 	console.log(`Jej samochód to ${brand} ${model}`);
+// };
+// showInfo2(person);
+// const showInfo3 = () => {
+// 	const {
+// 		car: { brand, model },
+// 	} = person;
+// 	console.log(`Jej samocbód to ${brand} ${model}.`);
+// };
+// showInfo3();

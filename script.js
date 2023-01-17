@@ -206,3 +206,57 @@
 // 	console.log(`Jej samocbód to ${brand} ${model}.`);
 // };
 // showInfo3();
+// let n = 5
+// let s = "i"
+
+// const repeatStr = (n, s) => {
+// 	let newStr = "";
+
+// 	for (let i = 0; i <= n; i++) {
+// 		newStr.concat(" ", s);
+// 		i++;
+// 		console.log(newStr);
+// 	}
+
+// 	return newStr;
+// };
+
+// repeatStr(n,s);\
+let signs = ["paper", "rock", "scissors"];
+let number = Math.floor(Math.random() * 3);
+let number2 = Math.floor(Math.random() * 3);
+const player = signs[number];
+const computer = signs[number2];
+console.log(number);
+console.log(number2);
+console.log(player);
+console.log(computer);
+
+const compWin = () => {
+	console.log("Computer wins!");
+};
+const playerWin = () => {
+	console.log("Player wins!");
+};
+
+if (player === computer) {
+	console.log("It's a tie!");
+} else if (player === "rock") {
+	if (computer === "scissors") {
+		playerWin();
+	} else {
+		compWin();
+	}
+} else if (player === "paper") {
+	if (computer === "rock") {
+		playerWin();
+	} else {
+		compWin();
+	}
+} else if (player === "scissors") {
+	if (computer === "paper") {
+		playerWin();
+	} else {
+		compWin();
+	}
+}

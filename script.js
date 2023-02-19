@@ -1,4 +1,4 @@
-// //objects exercise//
+//objects exercise//
 // const myBookShelf = {
 // 	school: {
 // 		title: "Math textbook",
@@ -11,10 +11,11 @@
 // 		author: "Haruki Murakami",
 // 		publishing: "Vintage",
 // 	},
+
 // 	spirituality: {
 // 		title: "The Bible",
 // 		author: "multiple authors",
-// 		publishing: "Św Paweł",
+// 		publishing: "sw Paweł",
 // 	},
 // };
 // console.log(
@@ -23,11 +24,9 @@
 
 // const newUser = {
 // 	name: "Lisa",
-
 // 	age: 23,
 // 	car: {
 // 		brand: "Audi",
-
 // 		model: "A3",
 // 		"fav-food": "sushi",
 // 		color: "czarny",
@@ -43,31 +42,36 @@
 // console.log(newUser);
 
 //odc 124 zadanie
-
 // const user = {
 // 	name: "Paula",
+// 	age: 22,
+// 	pet: "Ruby",
 // 	showName() {
 // 		console.log(user.name);
 // 	},
+// 	showPet() {
+// 		console.log(user.pet);
+// 	},
 // };
 // user.showName();
-
+// user.showPet();
+// console.log(user);
 // odc 126 prototypy
-// function User(name, age) {
-// 	this.name = name;
-// 	this.age = age;
-// }
+function User(name, age) {
+	this.name = name;
+	this.age = age;
+}
 
-// const newUser = new User("Klaudia", 23);
-// const newUser2 = new User("Ania", 21);
-// const newUser3 = new User("Marek", 27);
-// console.log(newUser, newUser2, newUser3);
-// User.prototype.hello = function () {
-// 	console.log(`Cześć ${this.name}`);
-// };
-// User.prototype.country = "Polska";
-// console.log(newUser2.country);
-// newUser3.hello();
+const newUser = new User("Klaudia", 23);
+const newUser2 = new User("Ania", 21);
+const newUser3 = new User("Marek", 27);
+console.log(newUser, newUser2, newUser3);
+User.prototype.hello = function () {
+	console.log(`Cześć ${this.name}`);
+};
+User.prototype.country = "Polska";
+console.log(newUser2.country);
+newUser3.hello();
 
 // odc 127 zadanie
 // const Btn1 = document.querySelector(".btn-1");
@@ -222,41 +226,48 @@
 // };
 
 // repeatStr(n,s);\
-let signs = ["paper", "rock", "scissors"];
-let number = Math.floor(Math.random() * 3);
-let number2 = Math.floor(Math.random() * 3);
-const player = signs[number];
-const computer = signs[number2];
-console.log(number);
-console.log(number2);
-console.log(player);
-console.log(computer);
 
-const compWin = () => {
-	console.log("Computer wins!");
-};
-const playerWin = () => {
-	console.log("Player wins!");
-};
+// papier, kamien, nozyce z komputerem
+// let signs = ["paper", "rock", "scissors"];
+// let number = Math.floor(Math.random() * 3);
+// let number2 = Math.floor(Math.random() * 3);
+// const player = signs[number];
+// const computer = signs[number2];
+// console.log(number);
+// console.log(number2);
+// console.log(player);
+// console.log(computer);
 
-if (player === computer) {
-	console.log("It's a tie!");
-} else if (player === "rock") {
-	if (computer === "scissors") {
-		playerWin();
-	} else {
-		compWin();
-	}
-} else if (player === "paper") {
-	if (computer === "rock") {
-		playerWin();
-	} else {
-		compWin();
-	}
-} else if (player === "scissors") {
-	if (computer === "paper") {
-		playerWin();
-	} else {
-		compWin();
-	}
-}
+// const compWin = () => {
+// 	console.log("Computer wins!");
+// };
+// const playerWin = () => {
+// 	console.log("Player wins!");
+// };
+// let confirmation = confirm("Do you want to watch a game?");
+// if (confirmation) {
+// 	alert("Go to the console");
+// 	if (player === computer) {
+// 		console.log("It's a tie!");
+// 	} else if (player === "rock") {
+// 		if (computer === "scissors") {
+// 			playerWin();
+// 		} else {
+// 			compWin();
+// 		}
+// 	} else if (player === "paper") {
+// 		if (computer === "rock") {
+// 			playerWin();
+// 		} else {
+// 			compWin();
+// 		}
+// 	} else if (player === "scissors") {
+// 		if (computer === "paper") {
+// 			playerWin();
+// 		} else {
+// 			compWin();
+// 		}
+// 	}
+// } else {
+// 	alert("That's a shame :(");
+// }

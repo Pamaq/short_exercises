@@ -272,40 +272,53 @@
 // 	alert("That's a shame :(");
 // }
 //papier kamien interaktywne
-let signs = ["papier", "kamien", "nozyce"];
-let numer = Math.floor(Math.random() * 3);
-let gra = confirm("Czy chcesz zagrac w papier kamien nozyce?");
-if (gra) {
-	let wyborKomputera = signs[numer];
-	let wyborGracza = prompt("Wpisz papier, kamien lub nozyce");
-	if (
-		wyborGracza == "papier" ||
-		wyborGracza == "nozyce" ||
-		wyborGracza == "kamien"
-	) {
-		alert(
-			"Wybor gracza: " + wyborGracza + ", Wybor komputera: " + wyborKomputera
-		);
-		if (wyborGracza == "papier" && wyborKomputera == "nozyce") {
-			alert("Wygrywa komputer!");
-		} else if (wyborGracza == "papier" && wyborKomputera == "kamien") {
-			alert("Wygrywa gracz!");
-		} else if (wyborGracza == "kamien" && wyborKomputera == "nozyce") {
-			alert("Wygrywa gracz!");
-		} else if (wyborGracza == wyborKomputera) {
-			alert("Remis!");
-		} else {
-			alert("Wygrywa gracz!");
-		}
-	} else {
-		alert("Wprowadzono nieprawidlowe dane!");
-	}
+// let signs = ["papier", "kamien", "nozyce"];
+// let numer = Math.floor(Math.random() * 3);
+// let gra = confirm("Czy chcesz zagrac w papier kamien nozyce?");
+// if (gra) {
+// 	let wyborKomputera = signs[numer];
+// 	let wyborGracza = prompt("Wpisz papier, kamien lub nozyce");
+// 	if (
+// 		wyborGracza == "papier" ||
+// 		wyborGracza == "nozyce" ||
+// 		wyborGracza == "kamien"
+// 	) {
+// 		alert(
+// 			"Wybor gracza: " + wyborGracza + ", Wybor komputera: " + wyborKomputera
+// 		);
+// 		if (wyborGracza == "papier" && wyborKomputera == "nozyce") {
+// 			alert("Wygrywa komputer!");
+// 		} else if (wyborGracza == "papier" && wyborKomputera == "kamien") {
+// 			alert("Wygrywa gracz!");
+// 		} else if (wyborGracza == "kamien" && wyborKomputera == "nozyce") {
+// 			alert("Wygrywa gracz!");
+// 		} else if (wyborGracza == wyborKomputera) {
+// 			alert("Remis!");
+// 		} else {
+// 			alert("Wygrywa gracz!");
+// 		}
+// 	} else {
+// 		alert("Wprowadzono nieprawidlowe dane!");
+// 	}
+// } else {
+// 	alert("Ok innym razem");
+// }
+// let powtorka = confirm("Chcesz zagrac jeszcze raz?");
+// if (powtorka) {
+// 	location.reload();
+// } else {
+// 	alert("Ok, dzieki za gre!");
+// }
+const getUsername = (email) => {
+	let positionOfAt = email.indexOf("@");
+	let userName = email.toString().slice(0, positionOfAt);
+	console.log(userName);
+	alert("Nazwa uzytkownika to: " + userName);
+};
+let email = prompt("Podaj adres email: ");
+if (email.includes("@")) {
+	getUsername(email);
 } else {
-	alert("Ok innym razem");
-}
-let powtorka = confirm("Chcesz zagrac jeszcze raz?");
-if (powtorka) {
+	alert("Wprowadzono zly adres!");
 	location.reload();
-} else {
-	alert("Ok, dzieki za gre!");
 }

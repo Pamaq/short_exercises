@@ -57,21 +57,21 @@
 // user.showPet();
 // console.log(user);
 // odc 126 prototypy
-function User(name, age) {
-	this.name = name;
-	this.age = age;
-}
+// function User(name, age) {
+// 	this.name = name;
+// 	this.age = age;
+// }
 
-const newUser = new User("Klaudia", 23);
-const newUser2 = new User("Ania", 21);
-const newUser3 = new User("Marek", 27);
-console.log(newUser, newUser2, newUser3);
-User.prototype.hello = function () {
-	console.log(`Cześć ${this.name}`);
-};
-User.prototype.country = "Polska";
-console.log(newUser2.country);
-newUser3.hello();
+// const newUser = new User("Klaudia", 23);
+// const newUser2 = new User("Ania", 21);
+// const newUser3 = new User("Marek", 27);
+// console.log(newUser, newUser2, newUser3);
+// User.prototype.hello = function () {
+// 	console.log(`Cześć ${this.name}`);
+// };
+// User.prototype.country = "Polska";
+// console.log(newUser2.country);
+// newUser3.hello();
 
 // odc 127 zadanie
 // const Btn1 = document.querySelector(".btn-1");
@@ -271,3 +271,41 @@ newUser3.hello();
 // } else {
 // 	alert("That's a shame :(");
 // }
+//papier kamien interaktywne
+let signs = ["papier", "kamien", "nozyce"];
+let numer = Math.floor(Math.random() * 3);
+let gra = confirm("Czy chcesz zagrac w papier kamien nozyce?");
+if (gra) {
+	let wyborKomputera = signs[numer];
+	let wyborGracza = prompt("Wpisz papier, kamien lub nozyce");
+	if (
+		wyborGracza == "papier" ||
+		wyborGracza == "nozyce" ||
+		wyborGracza == "kamien"
+	) {
+		alert(
+			"Wybor gracza: " + wyborGracza + ", Wybor komputera: " + wyborKomputera
+		);
+		if (wyborGracza == "papier" && wyborKomputera == "nozyce") {
+			alert("Wygrywa komputer!");
+		} else if (wyborGracza == "papier" && wyborKomputera == "kamien") {
+			alert("Wygrywa gracz!");
+		} else if (wyborGracza == "kamien" && wyborKomputera == "nozyce") {
+			alert("Wygrywa gracz!");
+		} else if (wyborGracza == wyborKomputera) {
+			alert("Remis!");
+		} else {
+			alert("Wygrywa gracz!");
+		}
+	} else {
+		alert("Wprowadzono nieprawidlowe dane!");
+	}
+} else {
+	alert("Ok innym razem");
+}
+let powtorka = confirm("Chcesz zagrac jeszcze raz?");
+if (powtorka) {
+	location.reload();
+} else {
+	alert("Ok, dzieki za gre!");
+}

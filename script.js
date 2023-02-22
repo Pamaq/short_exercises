@@ -309,16 +309,35 @@
 // } else {
 // 	alert("Ok, dzieki za gre!");
 // }
-const getUsername = (email) => {
-	let positionOfAt = email.indexOf("@");
-	let userName = email.toString().slice(0, positionOfAt);
-	console.log(userName);
-	alert("Nazwa uzytkownika to: " + userName);
+// const getUsername = (email) => {
+// 	let userName = email.toString().slice(0, email.indexOf("@"));
+// 	console.log(userName);
+// 	alert("Nazwa uzytkownika to: " + userName);
+// };
+// let email = prompt("Podaj adres email: ");
+// if (email.includes("@")) {
+// 	getUsername(email);
+// } else {
+// 	alert("Wprowadzono zly adres!");
+// 	location.reload();
+// }
+
+//dom manipulation cwiczenie
+const view1 = document.querySelector("#view1");
+console.log(view1);
+const createDivs = (parent, iter) => {
+	const newDiv = document.createElement("div");
+	newDiv.textContent = iter;
+	newDiv.style.backgroundColor = "white";
+	newDiv.style.width = "100px";
+	newDiv.style.height = "100px";
+	newDiv.style.margin = "10px";
+	newDiv.style.justifyContent = "center";
+	newDiv.style.display = "flex";
+	newDiv.style.alignItems = "center";
+	parent.append(newDiv);
 };
-let email = prompt("Podaj adres email: ");
-if (email.includes("@")) {
-	getUsername(email);
-} else {
-	alert("Wprowadzono zly adres!");
-	location.reload();
+
+for (let i = 1; i <= 6; i++) {
+	createDivs(view1, i);
 }

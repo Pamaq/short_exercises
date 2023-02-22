@@ -8,6 +8,12 @@ body {
 	font-size: 2em;
 	color: #ddd;
 }
+.view1 {
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	background-color: pink;
+}
 /* p {
 	color: #fff;
 	font-size: 20px;

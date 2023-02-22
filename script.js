@@ -323,21 +323,36 @@
 // }
 
 //dom manipulation cwiczenie
-const view1 = document.querySelector("#view1");
-console.log(view1);
-const createDivs = (parent, iter) => {
-	const newDiv = document.createElement("div");
-	newDiv.textContent = iter;
-	newDiv.style.backgroundColor = "white";
-	newDiv.style.width = "100px";
-	newDiv.style.height = "100px";
-	newDiv.style.margin = "10px";
-	newDiv.style.justifyContent = "center";
-	newDiv.style.display = "flex";
-	newDiv.style.alignItems = "center";
-	parent.append(newDiv);
-};
+// const view1 = document.querySelector("#view1");
+// console.log(view1);
+// const createDivs = (parent, iter) => {
+// 	const newDiv = document.createElement("div");
+// 	newDiv.textContent = iter;
+// 	newDiv.style.backgroundColor = "white";
+// 	newDiv.style.width = "100px";
+// 	newDiv.style.height = "100px";
+// 	newDiv.style.margin = "10px";
+// 	newDiv.style.justifyContent = "center";
+// 	newDiv.style.display = "flex";
+// 	newDiv.style.alignItems = "center";
+// 	parent.append(newDiv);
+// };
 
-for (let i = 1; i <= 6; i++) {
-	createDivs(view1, i);
-}
+// for (let i = 1; i <= 6; i++) {
+// 	createDivs(view1, i);
+// }
+
+//zrozumiec fetch i await async
+const getAllUserEmails = async () => {
+	const response = await fetch("https://jsonplaceholder.typicode.com/users");
+	const jsonUserData = await response.json();
+
+	const userEmailArray = jsonUserData.map((user) => {
+		return user.email;
+	});
+	postToWebPage(userEmailArray);
+};
+const postToWebPage = (data) => {
+	console.log(data);
+};
+getAllUserEmails();

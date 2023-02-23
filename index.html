@@ -16,7 +16,26 @@
 			<button class="btn-3">#3</button>
 		</div>
 		<p></p> -->
-		<section id="view1" class="view view1"></section>
+		<!-- <section id="view1" class="view view1"></section>
+		 -->
+		<section class="phoneView flexCenter">
+			<form id="phoneForm" class="phoneForm flexCenter">
+				<label for="phoneNum">Please enter your phone number:</label>
+				<input id="phoneNum" class="phoneNum" type="text" autocomplete="off" />
+				<p class="phoneFormat">Examples: (555)555-5555 or 123-456-7899</p>
+			</form>
+		</section>
+		<section class="textView" flexCenter>
+			<form id="textForm" class="textForm flexCenter">
+				<label for="textEntry">Please enter some text:</label>
+				<input
+					id="textEntry"
+					class="textEntry"
+					type="text"
+					autocomplete="off"
+				/>
+			</form>
+		</section>
 		<script src="script.js"></script>
 	</body>
 </html>

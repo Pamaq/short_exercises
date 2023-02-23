@@ -1,5 +1,5 @@
 body {
-	background: #000;
+	background: #d4baba;
 }
 .header {
 	font-family: "Courier New", Courier, monospace;
@@ -8,12 +8,12 @@ body {
 	font-size: 2em;
 	color: #ddd;
 }
-.view1 {
+/* .view1 {
 	display: flex;
 	flex-direction:row;
 	flex-wrap:wrap;
 	background-color: pink;
-}
+} */
 /* p {
 	color: #fff;
 	font-size: 20px;
@@ -34,4 +34,44 @@ button {
 button:hover {
 	background-color: #ddd;
 	color: #000;
-} */ 
+} */
+
+input {
+	font-size: 1rem;
+	text-align: center;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	width: 90vw;
+	/* letter-spacing: 5px; */
+	border-radius: 25px;
+	outline: none;
+}
+
+output:hover,
+input:focus {
+	box-shadow: 2px 2px 20px #424242;
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+}
+
+label {
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+.phoneFormat {
+	display: none;
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+.block {
+	display: block;
+}
+
+.invalid {
+	color: red;
+}

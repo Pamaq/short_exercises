@@ -1,12 +1,16 @@
+* {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	box-sizing: border-box;
+}
 body {
-	background: #d4baba;
+	background: #d5d0d0;
 }
 .header {
-	font-family: "Courier New", Courier, monospace;
 	font-style: bold;
 	text-align: center;
 	font-size: 2em;
-	color: #ddd;
+	color: rgb(61, 56, 56);
+	padding: 1rem;
 }
 /* .view1 {
 	display: flex;
@@ -39,9 +43,9 @@ button:hover {
 input {
 	font-size: 1rem;
 	text-align: center;
-	padding: 0.5rem;
+	padding: 1rem;
 	margin-bottom: 0.5rem;
-	width: 90vw;
+	width: 50vw;
 	/* letter-spacing: 5px; */
 	border-radius: 25px;
 	outline: none;
